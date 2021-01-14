@@ -1,0 +1,24 @@
+{
+  "name": "webxr-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --ignore=.git ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flowingis/webxr-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flowingis/webxr-workshop/issues"
+  },
+  "homepage": "https://github.com/flowingis/webxr-workshop#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "standard": "^16.0.3"
+  }
+}
