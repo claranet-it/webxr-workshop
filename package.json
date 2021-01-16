@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --ignore=.git ."
+    "start": "live-server --ignore=.git .",
+    "deploy": "sh deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,13 @@
   },
   "homepage": "https://github.com/flowingis/webxr-workshop#readme",
   "devDependencies": {
+    "husky": "^4.3.8",
     "live-server": "^1.2.1",
     "standard": "^16.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "post-push": "npm run deploy"
+    }
   }
 }
