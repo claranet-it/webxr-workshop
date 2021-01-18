@@ -21,5 +21,8 @@
   "devDependencies": {
     "live-server": "^1.2.1",
     "standard": "^16.0.3"
+  },
+  "standard": {
+    "globals": ["AFRAME"]
   }
 }
