@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server --ignore=.git .",
-    "deploy": "sh deploy.sh"
+    "deploy": "vercel"
   },
   "repository": {
     "type": "git",
