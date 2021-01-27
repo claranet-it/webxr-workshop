@@ -1,0 +1,21 @@
+<head>
+    <title>Most Basic Super-Hands Example</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/super-hands@^3.0.1/dist/super-hands.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="components.js"></script>
+  </head>
+  
+  <body>
+    <a-scene>
+      <a-assets></a-assets>
+      <a-entity>
+        <a-camera></a-camera>
+        <a-entity sphere-collider="objects: a-shoe" super-hands hand-controls="hand: left"></a-entity>
+        <a-entity sphere-collider="objects: a-shoe" super-hands hand-controls="hand: right"></a-entity>
+      </a-entity>
+      <a-entity environment="preset: forest;"></a-entity>
+      <a-shoe grabbable src="../assets/Sneaker-test-texturing.gltf" position="0 1.5 -0.1" point-to="E"></a-shoe>
+    </a-scene>
+  </body>

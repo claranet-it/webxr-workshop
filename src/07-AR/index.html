@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="spinosaurus" src="../assets/dino.glb"></a-asset-item>
+        </a-assets>
+
+        <a-camera position="0 1.2 0"></a-camera>
+
+        <a-entity 
+            position="-1 0 -5" 
+            scale="0.5 0.5 0.5" 
+            rotation="0 55 0" 
+            gltf-model="#spinosaurus" 
+            animation-mixer
+            shadow="cast: true; receive: false">
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
