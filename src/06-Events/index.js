@@ -14,7 +14,6 @@ const add = (i) => {
 }
 
 const moveTo = direction => {
-  window.alert('moving to', direction)
   Array
     .from(document.querySelectorAll('a-shoe'))
     .forEach(shoe => shoe.setAttribute('point-to', direction))
