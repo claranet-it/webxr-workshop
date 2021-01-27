@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="components.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-camera  wasd-controls-enabled="false">
+            <a-cursor fuse="true" fuse-timeout="500"></a-cursor>
+        </a-camera>
+        <a-assets>
+            <audio id="flow" src="../assets/It's Flow Time.m4a" preload="auto"></audio>
+            <img id="play" src="../assets/icons/play.png" alt="play"/>
+            <img id="plus" src="../assets/icons/plus.png" alt="plus"/>
+            <img id="exit" src="../assets/icons/exit.png" alt="exit"/>
+            <img id="arrow" src="../assets/icons/arrow.png" alt="arrow"/>
+        </a-assets>
+        <a-plane 
+            onclick="application.moveTo('S')"
+            src="#arrow" color="white" width="1" height="1" position="-5 7 -7"
+            rotation="0 0 90"
+            event-set__enter="_event: mouseenter; scale: 1.2" 
+            event-set__leave="_event: mouseleave; scale: 1">
+        </a-plane>
+        <a-plane 
+            onclick="application.moveTo('E')"
+            src="#arrow" color="white" width="1" height="1" position="-2 7 -7"
+            event-set__enter="_event: mouseenter; scale: 1.2" 
+            event-set__leave="_event: mouseleave; scale: 1">
+        </a-plane>
+        <a-plane 
+            rotation="0 0 270"
+            onclick="application.moveTo('N')"
+            src="#arrow" color="white" width="1" height="1" position="1 7 -7"
+            event-set__enter="_event: mouseenter; scale: 1.2" 
+            event-set__leave="_event: mouseleave; scale: 1">
+        </a-plane>
+        <a-plane 
+            rotation="0 0 180"
+            onclick="application.moveTo('W')"
+            src="#arrow" color="white" width="1" height="1" position="4 7 -7"
+            event-set__enter="_event: mouseenter; scale: 1.2" 
+            event-set__leave="_event: mouseleave; scale: 1">
+        </a-plane>
+        <a-plane 
+            onclick="application.playMusic()"
+            src="#play" color="white" width="1" height="1" position="-3 5 -7"
+            event-set__enter="_event: mouseenter; scale: 1.2" 
+            event-set__leave="_event: mouseleave; scale: 1">
+        </a-plane>
+        <a-plane 
+            onclick="application.exitVR()"
+            src="#exit" color="white" width="1" height="1" position="0 5 -7"
+            event-set__enter="_event: mouseenter; scale: 1.2" 
+            event-set__leave="_event: mouseleave; scale: 1">
+        </a-plane>
+        <a-plane 
+            onclick="application.add()"
+            src="#plus" color="white" width="1" height="1" position="3 5 -7"
+            event-set__enter="_event: mouseenter; scale: 1.2" 
+            event-set__leave="_event: mouseleave; scale: 1"></a-plane>
+        <a-entity sound="src: #flow; autoplay: false"></a-entity>
+        <a-shoe src="../assets/Sneaker-test-texturing.gltf" position="0 1 -5" point-to="N" scale="10 10 10"></a-shoe>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+        <a-sky color="#D3D3D3"></a-sky>
+    </a-scene>
+</body>
+
+</html>
