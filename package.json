@@ -23,6 +23,6 @@
     "standard": "^16.0.3"
   },
   "standard": {
-    "globals": ["AFRAME","createjs"]
+    "globals": ["AFRAME","createjs","THREE"]
   }
 }
