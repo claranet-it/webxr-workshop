@@ -7,6 +7,6 @@ AFRAME.registerComponent('crate', {
 
     const mesh = new THREE.Mesh(geometry, material)
 
-    this.el.setObject3D('create', mesh)
+    this.el.setObject3D('crate', mesh)
   }
 })
