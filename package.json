@@ -23,6 +23,11 @@
     "standard": "^16.0.3"
   },
   "standard": {
-    "globals": ["AFRAME","createjs","THREE"]
+    "globals": [
+      "AFRAME",
+      "createjs",
+      "THREE",
+      "faker"
+    ]
   }
 }
