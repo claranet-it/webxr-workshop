@@ -14,16 +14,23 @@
     <a-scene>
         <a-assets>
             <img id="chart" src="../assets/chart.png" alt="chart"/>    
-            <a-asset-item id="crate-obj" src="../assets/table.obj"></a-asset-item>
-            <a-asset-item id="crate-mtl" src="../assets/table.mtl"></a-asset-item>
+            <a-asset-item id="table-obj" src="../assets/table.obj"></a-asset-item>
+            <a-asset-item id="table-mtl" src="../assets/table.mtl"></a-asset-item>
+            <a-asset-item id="head-obj" src="../assets/head.obj"></a-asset-item>
         </a-assets>
-        <a-camera position="-2 1.8 0">
+        <a-camera position="-2 1.8 0" rotation-emitter>
             <a-cursor fuse="true" fuse-timeout="500"></a-cursor>
         </a-camera>
         <a-obj-model 
-            src="#crate-obj" 
-            mtl="#crate-mtl" 
+            src="#table-obj" 
+            mtl="#table-mtl" 
             position="0 0.8 1"
+            scale="0.01 0.01 0.02"></a-obj-model>
+        <a-obj-model 
+            rotation-receiver
+            src="#head-obj"  
+            position="0 0.8 1"
+            rotation="-90 0 0"
             scale="0.01 0.01 0.02"></a-obj-model>
         <a-plane 
             column-chart
