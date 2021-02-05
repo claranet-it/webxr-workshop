@@ -14,18 +14,11 @@
     <a-scene>
         <a-assets>
             <img id="chart" src="../assets/chart.png" alt="chart"/>    
-            <a-asset-item id="table-obj" src="../assets/table.obj"></a-asset-item>
-            <a-asset-item id="table-mtl" src="../assets/table.mtl"></a-asset-item>
             <a-asset-item id="head-obj" src="../assets/head.obj"></a-asset-item>
         </a-assets>
-        <a-camera position="-2 1.8 0" rotation-emitter>
+        <a-camera rotation-emitter>
             <a-cursor fuse="true" fuse-timeout="500"></a-cursor>
         </a-camera>
-        <a-obj-model 
-            src="#table-obj" 
-            mtl="#table-mtl" 
-            position="0 0.8 1"
-            scale="0.01 0.01 0.02"></a-obj-model>
         <a-obj-model 
             rotation-receiver
             src="#head-obj"  
@@ -37,7 +30,33 @@
             src="#chart"
             position="0 2 -1.5" 
             height="1" width="2" 
-            material="shader: flat; color: white"></a-plane>
+            material="shader: flat; color: white; side: double;"></a-plane>
+        <a-plane 
+            position="3.01 2 0" 
+            rotation="0 90 0"
+            height="1" width="20" 
+            material="shader: flat; color: white; side: double;"></a-plane>
+        <a-post-it 
+            type="event"
+            position="3 2 0.2"></a-post-it>
+        <a-post-it 
+            type="command"
+            position="3 2 0.1"></a-post-it>
+        <a-post-it 
+            type="command"
+            position="3 2 0.3"></a-post-it>
+        <a-post-it 
+            type="event"
+            position="3 2 0.4"></a-post-it>
+        <a-post-it 
+            type="event"
+            position="3 2.05 0.5"></a-post-it>
+        <a-post-it 
+            type="external"
+            position="3 2.05 0.6"></a-post-it>
+        <a-post-it 
+            type="event"
+            position="3 1.95 0.5"></a-post-it>
         <a-entity environment="preset: forest;"></a-entity>
     </a-scene>
 </body>
